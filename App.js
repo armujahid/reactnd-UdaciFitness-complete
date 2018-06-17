@@ -44,9 +44,6 @@ const Tabs = createBottomTabNavigator({
     }
   }
 }, {
-  navigationOptions: {
-    header: null
-  },
   tabBarOptions: {
     activeTintColor: Platform.OS === 'ios' ? purple : white,
     style: {
@@ -66,6 +63,9 @@ const Tabs = createBottomTabNavigator({
 const MainNavigator = createStackNavigator({
   Home: {
     screen: Tabs,
+    navigationOptions: {
+      header: null
+    }
   },
   EntryDetail: {
     screen: EntryDetail,
